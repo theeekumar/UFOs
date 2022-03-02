@@ -15,8 +15,7 @@ function buildTable(data) {
         // Loop through each filed in the dataRow and add each value as a table cell (td)
         Object.values(dataRow).forEach((val) => {
             let cell = row.append("td");
-            cell.text(val);
-        
+            cell.text(val); 
         }); 
     });
 }
@@ -38,7 +37,7 @@ function handleClick() {
 }
 
 // Attach an event to listen for the form button
-d3.selectALL("#filteredData");
+d3.selectAll("#filter-btn").on("click", handleClick); 
 
 // Build the table when the page loads
 buildTable(tableData); 
